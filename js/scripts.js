@@ -1,8 +1,8 @@
 //business logic
 var i=0;
 vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-var secretSentence = [];
 var replaceVowels = function(input) {
+  var secretSentence = [];
   for (i=0; i < input.length; i++) {
     if (vowels.includes(input[i])) {
       secretSentence.push("-");  //alternately secretSentence.push(input[i] = "-");
@@ -21,5 +21,6 @@ $(document).ready(function(){
     var userInput = $("input#sentence").val().split("");
     var newSentence = replaceVowels(userInput);
     $("#output").text(newSentence);
+    $("input").val("");
   });
 });
